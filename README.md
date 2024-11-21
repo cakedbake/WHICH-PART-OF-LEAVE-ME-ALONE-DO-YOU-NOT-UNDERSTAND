@@ -6,6 +6,10 @@
 - `TAGS`: an array of the things you desire to tarnish the victim's DMs with
 
 ## Usage:
+- Install all packages:
+```bash
+npm install
+```
 - Run the bot with:
 ```bash
 node index.js
