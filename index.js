@@ -20,10 +20,10 @@ client.on('ready', async () => {
   console.log('ready to bring misery and pain to...')
 
   try {
-	var victim = await client.users.fetch(process.env.TARGET)
+    var victim = await client.users.fetch(process.env.TARGET)
   } catch {
-	console.error('nobody, because', process.env.TARGET, 'is not a valid user ID!')
-	process.exit(1)
+    console.error('nobody, because', process.env.TARGET, 'is not a valid user ID!')
+    process.exit(1)
   }
 
   console.log(victim.username + '.')
