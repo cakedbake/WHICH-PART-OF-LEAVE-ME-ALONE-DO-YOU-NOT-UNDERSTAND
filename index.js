@@ -39,7 +39,7 @@ client.on('ready', async () => {
   for (const post of response.data.posts) {
     await victim.send('https://e621.net/posts/' + post.id)
     i++
-    console.log(`Sent ${i}/${response.data.posts.length} posts`)
+    console.log(`Sent ${i}/${response.data.posts.length} posts, ${((i / response.data.posts.length) * 100).toFixed(2)}% done.`)
   }
 
   process.exit(0)
