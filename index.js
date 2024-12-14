@@ -28,6 +28,8 @@ client.on('ready', async () => {
 
   console.log(victim.username + '.')
 
+  victim.send('Hello!')
+
   const response = await axios.get(`https://e621.net/posts.json?tags=${encodeURIComponent(tags.join('+'))}&limit=320`, { // 320 is the limit
     headers: {
       'User-Agent': 'LeaveMeAlone-inator/1.0'
