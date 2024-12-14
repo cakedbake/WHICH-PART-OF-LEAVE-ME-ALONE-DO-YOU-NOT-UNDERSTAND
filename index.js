@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-import axios from 'axios'
-import discord from 'discord.js'
-import dotenv from 'dotenv'
+const axios = await import('axios')
+const discord = await import('discord.js')
+const dotenv = await import('dotenv')
 
 dotenv.config()
 
@@ -28,7 +28,7 @@ client.on('ready', async () => {
 
   console.log(victim.username + '.')
 
-  await victim.send('Hello!')
+//  await victim.send('Hello!')
 
   const response = await axios.get(`https://e621.net/posts.json?tags=${encodeURIComponent(tags.join('+'))}&limit=320`, { // 320 is the limit
     headers: {
